@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    image: adolfintel/speedtest
+    ports:
+      - 8082:80
+    restart: always
+    environment:
+      - MODE=standalone
+      - TITLE=Jette Speedtest
