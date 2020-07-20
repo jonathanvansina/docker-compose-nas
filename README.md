@@ -13,6 +13,22 @@ A collection of Docker Compose files optimized for a Synology NAS.
 2. It's easy to [bind mount](https://docs.docker.com/storage/bind-mounts/) Docker volumes with your Synology NAS, by this way it's easy to backup your volumes (for example with Hyper Explorer).
 3. Bind mounting volumes is depented on your disk configuration. But if you have one volume, in the most cases this volume will be mounted on `/volume1/` on your NAS.
 
+## Putting your Containers behind Synology built-in reverse proxy
+
+Synology NAS has a built-in reverse proxy. It's very easy to put a docker container behind this reverse proxy:
+
+1. Make sure you own a domain (ex. example.com) and you can edit the DNS records.
+2. Follow the guide of your registrar and point an A-record to the public IP of your Synology NAS (if you have a dynamic IP, look to enable DDNS).
+3. Go to the settings of your NAS and **Application Portal** - **Reverse Proxy** and create an entry.
+![](.images/docker-compose-nas-01.png)
+4. To obtain a certificate for this domain:
+   1. Go to **Security** - **Certificates**
+   2. Add the certificates for your created domain
+        ![](.images/02-certificate.png)
+
+I use Let's Encrypt certificates and this is working perfect by this way.
+   
+
 ## Optimized docker-composes
 
 ### Ubiquiti Unifi Controller
