@@ -9,13 +9,13 @@ A collection of Docker Compose files optimized for a Synology NAS.
 
 ## General info
 
-1. Don't use the Docker UI in your Synology NAS, only use docker or docker-compose over SSH.
+1. Don't use the Docker UI in your Synology NAS, only use Docker or docker-compose over SSH.
 2. It's easy to [bind mount](https://docs.docker.com/storage/bind-mounts/) Docker volumes with your Synology NAS, by this way it's easy to backup your volumes (for example with Hyper Explorer).
 3. Bind mounting volumes is depented on your disk configuration. But if you have one volume, in the most cases this volume will be mounted on `/volume1/` on your NAS.
 
 ## Putting your Containers behind Synology built-in reverse proxy
 
-Synology NAS has a built-in reverse proxy. It's very easy to put a docker container behind this reverse proxy:
+Synology NAS has a built-in reverse proxy. It's very easy to put a Docker container behind this reverse proxy:
 
 1. Make sure you own a domain (ex. example.com) and you can edit the DNS records.
 2. Follow the guide of your registrar and point an A-record to the public IP of your Synology NAS (if you have a dynamic IP, look to enable DDNS).
@@ -26,7 +26,7 @@ Synology NAS has a built-in reverse proxy. It's very easy to put a docker contai
    2. Add the certificates for your created domain
         ![](.images/02-certificate.png)
 
-I use Let's Encrypt certificates and this is working perfect by this way.
+I use Let's Encrypt certificates and this is working perfect.
    
 
 ## Optimized docker-composes
@@ -45,4 +45,4 @@ The Docker image is [jacobalberty/unifi-docker](https://github.com/jacobalberty/
         ```bash
         set-inform http://ip-of-controller:8080/inform
         ```
-   3. See [this help page](https://help.ui.com/hc/en-us/articles/204909754-UniFi-Layer-3-methods-for-UAP-adoption-and-management) from Ubiquiti from more adopting options.
+    See [this help page](https://help.ui.com/hc/en-us/articles/204909754-UniFi-Layer-3-methods-for-UAP-adoption-and-management) from Ubiquiti from more adopting options.
