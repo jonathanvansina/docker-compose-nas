@@ -38,8 +38,8 @@ The UniFi® Software-Defined Networking (SDN) platform is an end-to-end system o
 The Docker image is [jacobalberty/unifi-docker](https://github.com/jacobalberty/unifi-docker).
 
 #### Notes:
-* You can run this with a seperate MongoDB container, see the README of this image.
-* Sometimes after updates, my Ubiquiti AP, can't find my controller anymore, there is a little trick for this:
+* You can run this with a seperate MongoDB container, see the README of [the image](https://github.com/jacobalberty/unifi-docker).
+* Sometimes after updates, Ubiquiti APs, can't find the controller anymore, there is a little trick for this:
   1. Enable SSH access to your Unifi AP.
   2. Execute this command on your Unifi access point
         ```bash
